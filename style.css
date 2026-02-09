@@ -10,8 +10,14 @@ body {
     background-color: #f8f8f8;
     color: #333;
     font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Top Bar */
@@ -23,7 +29,7 @@ body {
     font-size: 0.9em;
 }
 
-/* Header */
+/* Header / Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -100,31 +106,33 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
+    display: inline-block;
 }
-.btn:hover{
 
-    color:#222;
+.btn:hover {
+    color: #222;
     transform: scale(1.03);
-
 }
-#btn1{
+
+#btn1 {
     width: 100px;
     border: 2px solid black;
     border-radius: 10px;
-    color:white;
+    color: white;
     background-color: #222;
 }
+
 #btn1:hover {
     background-color: white;
-    color:#222;
+    color: #222;
 }
 
 .hero img {
     width: 400px;
     height: 300px;
-margin-right: 100px;
-border: 5px solid red;
-border-radius: 20px;
+    margin-right: 100px;
+    border: 5px solid red;
+    border-radius: 20px;
 }
 
 /* Deal of the Day */
@@ -140,6 +148,7 @@ border-radius: 20px;
     margin: 20px 0;
 }
 
+/* Products Section */
 .products {
     display: flex;
     margin-left: 50px;
@@ -156,8 +165,10 @@ border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 220px;
     text-align: center;
+    transition: transform 0.3s ease;
 }
-.product:hover{
+
+.product:hover {
     transform: scale(1.1);
 }
 
@@ -166,12 +177,13 @@ border-radius: 20px;
     height: 100px;
     border-radius: 100px;
 }
-#productheadings{
+
+#productheadings {
     padding-left: 200px;
     font-size: 50px;
-
 }
-#productheadings:hover{
+
+#productheadings:hover {
     color: #d31c1c;
 }
 
@@ -179,21 +191,22 @@ border-radius: 20px;
     font-size: 1.2em;
     margin-top: 10px;
 }
-.add-to-cart{
+
+.add-to-cart {
     width: 100px;
-    height: 20px;
+    height: 30px;
     border: 2px solid black;
     background-color: #f8c146;
     color: black;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
 }
-.add-to-cart:hover{
+
+.add-to-cart:hover {
     background-color: white;
-    color:#222;
-
+    color: #222;
 }
-
 
 /* Footer */
 footer {
@@ -202,4 +215,88 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .cart {
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero img {
+        width: 90%;
+        height: auto;
+        margin: 20px 0 0 0;
+    }
+
+    /* Products Heading */
+    #productheadings {
+        padding-left: 0;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    /* Products */
+    .products {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .product {
+        width: 90%;
+        margin: auto;
+    }
+
+    .product:hover {
+        transform: scale(1.03);
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9em;
+    }
 }
