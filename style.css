@@ -51,6 +51,30 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    gap: 30px;
+    padding-left: 180px;
+   
+}
+nav button{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e2dcdc;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid rgb(245, 242, 242);
+    font-weight: bold;
+    text-align: center;
+
+}
+nav button:hover {
+    background-color: white;
+    color: #222;
+}
+
+nav button:active {
+    background-color: #ddd;
+    color: #222;
 }
 
 nav ul li {
@@ -99,31 +123,26 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
-.btn {
-    background: #d31c1c;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+/* Button */
+.btn1 {
     display: inline-block;
-}
-
-.btn:hover {
-    color: #222;
-    transform: scale(1.03);
-}
-
-#btn1 {
-    width: 100px;
-    border: 2px solid black;
-    border-radius: 10px;
-    color: white;
+    padding: 12px 25px;
     background-color: #222;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
 }
 
-#btn1:hover {
+.btn1:hover {
     background-color: white;
+    color: #222;
+}
+
+.btn1:active {
+    background-color: #ddd;
     color: #222;
 }
 
@@ -169,7 +188,7 @@ nav ul li a {
 }
 
 .product:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .product img {
@@ -192,9 +211,10 @@ nav ul li a {
     margin-top: 10px;
 }
 
+/* Add to Cart Button */
 .add-to-cart {
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
     border: 2px solid black;
     background-color: #f8c146;
     color: black;
@@ -206,6 +226,36 @@ nav ul li a {
 .add-to-cart:hover {
     background-color: white;
     color: #222;
+}
+
+/* =========================
+   CART SECTION (NEW)
+   ========================= */
+.cart-section {
+    background: white;
+    padding: 25px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#cart-items p {
+    padding: 8px 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-section h3 {
+    text-align: right;
+    margin-top: 15px;
+    color: #d31c1c;
 }
 
 /* Footer */
@@ -222,7 +272,6 @@ footer {
    ========================= */
 @media (max-width: 768px) {
 
-    /* Navbar */
     nav {
         flex-direction: column;
         padding: 15px 20px;
@@ -238,11 +287,6 @@ footer {
         margin: 8px 0;
     }
 
-    .cart {
-        margin-top: 10px;
-    }
-
-    /* Hero Section */
     .hero {
         flex-direction: column;
         padding: 20px;
@@ -263,18 +307,15 @@ footer {
 
     .hero img {
         width: 90%;
-        height: auto;
-        margin: 20px 0 0 0;
+        margin: 20px 0 0;
     }
 
-    /* Products Heading */
     #productheadings {
         padding-left: 0;
         font-size: 32px;
         text-align: center;
     }
 
-    /* Products */
     .products {
         margin-left: 0;
         padding: 20px;
@@ -285,18 +326,29 @@ footer {
         margin: auto;
     }
 
-    .product:hover {
-        transform: scale(1.03);
+    .cart-section {
+        width: 95%;
     }
+}
 
-    /* Buttons */
-    .btn {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
 
-    /* Footer */
-    footer {
-        font-size: 0.9em;
-    }
+.cart-section {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 260px;
+    background: #fff;
+    border: 2px solid #d31c1c;
+    padding: 15px;
+    display: none;   /* 🔴 HIDDEN */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.cart-section ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
 }

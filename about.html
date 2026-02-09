@@ -12,12 +12,21 @@
         <nav>
             <h1 class="logo">Grocery <span>Shopping</span></h1>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <button> <li><a href="index.html">Home</a></li></button>
+                <button>  <li><a href="about.html">About</a></li></button>
+                <button> <li><a href="shop.html">Shop</a></li></button>
+                 <button><li><a href="contact.html">Contact</a></li></button>
             </ul>
-            <div class="cart">Cart (0)</div>
+            <!-- Cart Button -->
+<div class="cart" id="cartBtn">Cart 🛒</div>
+
+<!-- Cart Box -->
+<div id="cartSection" style="display:none; position:fixed; right:20px; top:80px; background:white; padding:15px; border:1px solid #ccc; width:250px; z-index:1000;">
+    <h3>Cart Items</h3>
+    <div id="cart-items"></div>
+    <hr>
+    <p id="cart-total">Total: ₹0</p>
+</div>
         </nav>
     </header>
     
@@ -42,5 +51,6 @@
             <p><i class="fas fa-envelope"></i> 1223@mail.com</p>
             <p><i class="fas fa-phone"></i> 5452496740</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

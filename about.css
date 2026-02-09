@@ -48,6 +48,29 @@ nav {
     color: #e53935;
 }
 
+
+
+nav button{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #adcee49c;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid rgb(245, 242, 242);
+    font-weight: bold;
+    text-align: center;
+
+}
+nav button:hover {
+    background-color: white;
+    color: #222;
+}
+
+nav button:active {
+    background-color: #ddd;
+    color: #222;
+}
 /* Nav Links */
 nav ul {
     list-style: none;
@@ -96,6 +119,26 @@ nav ul li a:hover::after {
 
 .cart:hover {
     transform: scale(1.1);
+}
+.cart-section {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 260px;
+    background: #fff;
+    border: 2px solid #d31c1c;
+    padding: 15px;
+    display: none;   /* 🔴 HIDDEN */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.cart-section ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 /* About Section */

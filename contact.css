@@ -116,12 +116,57 @@ nav ul li a {
 
 /* Footer */
 footer {
-    background: black;
+    background: rgb(33, 32, 32);
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
 }
+nav button{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #cadce99c;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid rgb(236, 224, 224);
+    font-weight: bold;
+    text-align: center;
+
+}
+nav button:hover {
+    background-color: white;
+    color: #222;
+}
+
+nav button:active {
+    background-color: #ddd;
+    color: #f88d8d;
+}
+
+
+/* cart section*/
+.cart-section {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 260px;
+    background: #fff;
+    border: 2px solid #d31c1c;
+    padding: 15px;
+    display: none;   /* 🔴 HIDDEN */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.cart-section ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
 
 /* ================= MOBILE RESPONSIVE ================= */
 
