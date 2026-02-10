@@ -23,14 +23,19 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <div class="cart" id="cartBtn">Cart 🛒</div>
-
+                <li><a href="contact.html">Contact</a></li>                
             </ul>
-            <div id="cartSection" class="cart-section">
+            <!-- Cart Button -->
+<div class="cart" id="cartBtn">
+    Cart 🛒 <span id="cart-count">0</span>
+     
+</div>
+
+    <div id="cartSection" class="cart-section">
     <h3>Your Cart</h3>
     <div id="cart-items"></div>
     <p id="cart-total">Total: ₹0</p>
+    <button class="clear-btn" onclick="clearCart()">Remove All</button>
 </div>
 
         </nav>  

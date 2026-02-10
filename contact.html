@@ -21,14 +21,16 @@
             </ul>
 
             <!-- Cart Button -->
-<div class="cart" id="cartBtn">Cart 🛒</div>
+<div class="cart" id="cartBtn">
+    Cart 🛒 <span id="cart-count">0</span>
+     
+</div>
 
-<!-- Cart Box -->
-<div id="cartSection" style="display:none; position:fixed; right:20px; top:80px; background:white; padding:15px; border:1px solid #ccc; width:250px; z-index:1000;">
-    <h3>Cart Items</h3>
+    <div id="cartSection" class="cart-section">
+    <h3>Your Cart</h3>
     <div id="cart-items"></div>
-    <hr>
     <p id="cart-total">Total: ₹0</p>
+    <button class="clear-btn" onclick="clearCart()">Remove All</button>
 </div>
         </nav>
             

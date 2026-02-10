@@ -154,10 +154,29 @@ nav button:active {
     background: #fff;
     border: 2px solid #d31c1c;
     padding: 15px;
-    display: none;   /* 🔴 HIDDEN */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     border-radius: 10px;
     z-index: 1000;
+
+    /* Animation setup */
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.35s ease;
+}
+
+/* When cart is open */
+.cart-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Scroll only cart items */
+#cart-items {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .cart-section ul {
@@ -166,6 +185,71 @@ nav button:active {
     max-height: 300px;
     overflow-y: auto;
 }
+.clear-cart-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background: #fcad2e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.clear-cart-btn:hover {
+    background: #b30000;
+}
+
+
+/* Cart Items Scroll */
+#cart-items {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+/* Individual cart item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #ebe4e4;
+    font-size: 14px;
+}
+
+/* Remove button */
+.remove-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+#cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+#cart-items::-webkit-scrollbar-thumb {
+    background: #e53935;
+    border-radius: 10px;
+}
+
+.remove-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Cart Count Badge */
+#cart-count {
+    background: white;
+    color: #d31c1c;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
+
 
 
 /* ================= MOBILE RESPONSIVE ================= */

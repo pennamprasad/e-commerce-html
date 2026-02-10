@@ -68,7 +68,7 @@ nav button:hover {
 }
 
 nav button:active {
-    background-color: #ddd;
+    background-color: #b9afaf;
     color: #222;
 }
 /* Nav Links */
@@ -107,31 +107,43 @@ nav ul li a:hover::after {
 }
 
 /* Cart */
-.cart {
-    font-weight: 600;
-    background-color: #e53935;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
 
-.cart:hover {
-    transform: scale(1.1);
-}
 .cart-section {
     position: fixed;
     top: 80px;
     right: 20px;
     width: 260px;
-    background: #fff;
+    background: #ebe9e9;
     border: 2px solid #d31c1c;
     padding: 15px;
-    display: none;   /* 🔴 HIDDEN */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     border-radius: 10px;
     z-index: 1000;
+
+    /* Animation setup */
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.35s ease;
+}
+.cart{
+    background: #d9534f;
+    color: rgb(254, 249, 249);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+/* When cart is open */
+.cart-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Scroll only cart items */
+#cart-items {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .cart-section ul {
@@ -140,6 +152,70 @@ nav ul li a:hover::after {
     max-height: 300px;
     overflow-y: auto;
 }
+.clear-cart-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background: #f5f2ee;
+    color: rgb(248, 245, 245);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.clear-cart-btn:hover {
+    background: #b30000;
+}
+
+
+/* Cart Items Scroll */
+#cart-items {
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+/* Individual cart item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #0b0b0b;
+    font-size: 14px;
+}
+
+/* Remove button */
+.remove-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+#cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+#cart-items::-webkit-scrollbar-thumb {
+    background: #e53935;
+    border-radius: 10px;
+}
+
+.remove-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Cart Count Badge */
+#cart-count {
+    background: rgb(225, 212, 212);
+    color: #d31c1c;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
 
 /* About Section */
 .about {
@@ -219,19 +295,6 @@ footer p {
     color: #ccc;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .about {
-        padding: 40px 10%;
-    }
-}
-
-
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 768px) {
@@ -264,3 +327,4 @@ footer p {
         font-size: 14px;
     }
 }
+
